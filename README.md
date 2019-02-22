@@ -103,13 +103,13 @@ Copyright
 ------------------------------------------------------------------------------
 
 
-        Copyright (C)  2017
+        Copyright (C)  2017 on the DAB processing
         Jan van Katwijk (J.vanKatwijk@gmail.com)
         Lazy Chair Computing
 	
-	Copyright (C) 2019 on the IP handling
-	Mathias.Kuefner@bmt-online.de
-	Bayerische Medien Technik GmbH
+        Copyright (C) 2019 on the IP handling
+        Mathias.Kuefner@bmt-online.de
+        Bayerische Medien Technik GmbH
 
 
         The javadab-cmdline software is made available under the GPL-2.0.
