@@ -32,6 +32,7 @@ Commandline parameters
 
 The general structure for parameter handling is "-x:y".
 
+	-m:xx	where xx denotes the Mode (either 1, 2 or 4), default is 1.
 	-c:xx	where xx is the name of the channel, default is "11C";
 	-p:xx	where xx is the name of the service to be selected;
 	-g:xx	where xx is the gain (range 1 .. 100), default is "50";
@@ -82,8 +83,6 @@ are stored.
 
 Compilation is simply by "javac JavaRadio.java"
 
-Running is simply by "java JavaRadio"
-
 Running DAB then is simply by "java JavaRadio".
 
 ------------------------------------------------------------------------------
@@ -95,8 +94,7 @@ the Mode) differ. This can be set in an "ini" file. Such an ini file
 is stored in the home directory, and is named ".javaDab.ini"
 
 Adding a line "dabBand=LBand" will cause the tuner to
-be set to the L-Band, and setting "dabMode=2" will set the software to
-recognize Mode 2.
+be set to the L-Band, 
 
 -------------------------------------------------------------------------------
 Copyright
