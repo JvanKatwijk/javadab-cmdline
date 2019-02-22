@@ -28,6 +28,4 @@ public interface Device {
 	public	void	autoGain	(boolean b);
 	public	int	samples		();
 	public	int	getSamples	(float [] v, int amount);
-	public	boolean	is_nullDevice	();
-	public	boolean	is_fileInput	();
 }

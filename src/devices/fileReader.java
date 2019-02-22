@@ -105,14 +105,4 @@ public class fileReader implements Device {
 	   }
 	   return amount;
 	}
-
-        @Override
-        public  boolean is_nullDevice   () {
-            return false;
-        }
-
-        @Override
-        public  boolean is_fileInput   () {
-            return true;
-        }
 }

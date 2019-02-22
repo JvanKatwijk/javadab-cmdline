@@ -23,34 +23,36 @@ package rtltcp;
 import java.nio.ByteBuffer;
 
 
-// these tool collection is now only used for encoding the command messages that are sent to the rtl_tcp server
+//	these tool collection is now only used for encoding
+//	the command messages that are sent to the rtl_tcp server
 
 public class Tools {
 
-	// just a collection of static methods (that can be used without instantiating the class)
+//	just a collection of static methods
+//	(that can be used without instantiating the class)
 	
-	public static byte[] integerToBytes(Integer in) {
-		byte[] bytes = ByteBuffer.allocate(4).putInt(in).array();
-		return bytes;
+	public static byte [] integerToBytes (Integer in) {
+	   byte[] bytes = ByteBuffer. allocate (4). putInt (in). array();
+	   return bytes;
 	}
 	
-	/*
-	 * not needed as DataInputStream readFloat() should exactly do this for us
-	 * 
+/*
+ * not needed as DataInputStream readFloat() should exactly do this for us
+ * 
 	public static float bytesToFloat(byte[] bytes) {
-		float f = Float.intBitsToFloat(
-			    (bytes[0] & 0xff)
-			    | ((bytes[1] & 0xff) << 8)
-			    | ((bytes[2] & 0xff) << 16)
-			    | ((bytes[3] & 0xff) << 24));
-		return f;
-	}
-	*/
-	
-	public static byte[] shortenTail(byte[] a, int amount) {
-		byte[] c = new byte[a.length - amount];
-		System.arraycopy(a, 0, c, 0, a.length-amount);
-		return c;
+	float f = Float.intBitsToFloat(
+		    (bytes[0] & 0xff)
+		    | ((bytes[1] & 0xff) << 8)
+		    | ((bytes[2] & 0xff) << 16)
+		    | ((bytes[3] & 0xff) << 24));
+	return f;
+}
+*/
+
+public static byte[] shortenTail(byte[] a, int amount) {
+	byte[] c = new byte[a.length - amount];
+	System.arraycopy(a, 0, c, 0, a.length-amount);
+	return c;
 	}
 	
 	public static byte[] concat(byte[] a, byte[] b) {

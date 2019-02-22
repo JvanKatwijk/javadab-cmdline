@@ -69,12 +69,6 @@ public class airspyDevice implements Device {
               throw (new Exception ());
 	}
         
-        @Override
-	public	boolean	is_nullDevice () { return false; }
-
-	@Override
-	public	boolean	is_fileInput () { return false; }
-
 	private native	int	airspy_getSamples (long handle, float [] v,
 	                                                      int amount);
 	private	native	int	airspy_samples	        (long handle);

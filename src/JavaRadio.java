@@ -93,7 +93,7 @@ public class JavaRadio implements modelSignals  {
 	      theDevice =
 	           bindDevice (args,
 	                       my_bandHandler. Frequency (channel), gain);
-	      if (theDevice. is_nullDevice ()) {
+	      if (theDevice == null) {
 	         System. out. println ("unable to bind to device");
 	         System. exit (1);
 	      }
@@ -154,8 +154,7 @@ public class JavaRadio implements modelSignals  {
 
 	private static Device bindDevice (String [] args,
 	                                  int frequency, int gain) {
-	   Device tester;
-	   
+	   Device tester	= null;
 	   
 	   try {
 	      tester = new airspyDevice (frequency, gain, true);
@@ -172,10 +171,7 @@ public class JavaRadio implements modelSignals  {
 	      return tester;
 	   } catch (Exception e) {}
 
-	   if (args. length > 1) {
-           }
-
-	   return new nullDevice ();
+	   return null;
 	}
 
 	static

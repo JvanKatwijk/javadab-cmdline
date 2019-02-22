@@ -55,12 +55,6 @@ public class rtlsdrDevice implements Device {
 	   rtlsdr_autogain (handle, b);
 	}
 
-	@Override
-	public	boolean	is_nullDevice	() { return false; }
-
-	@Override
-	public	boolean	is_fileInput	() { return false; }
-
 	public	rtlsdrDevice (int frequency,
 	                      int gain,
 	                      boolean autogain) throws Exception {
