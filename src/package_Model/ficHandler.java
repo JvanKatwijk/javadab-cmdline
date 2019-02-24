@@ -28,7 +28,7 @@ public	class	ficHandler extends fibHandler {
         final private   byte [] pRBS		= new byte [768];
 	final private	int  [] ofdmInput	= new int  [2304];
 	final private	int  []	viterbiBlock	= new int  [3072 + 24];
-	final private	boolean  []	indexTable	= new boolean  [3072 + 24];
+	final private	boolean  [] indexTable	= new boolean  [3072 + 24];
 	final private	byte [] fibBlock	= new byte [256];
 
 	final private   TableHandler my_tableHandler    = new TableHandler ();

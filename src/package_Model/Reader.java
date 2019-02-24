@@ -76,14 +76,12 @@ public class Reader {
 	                                      my_Device. samples ());
 	   n = my_Device. getSamples (v, v. length / 2);
 	   
-	   if (n > (v.length/2)) {
-		   System.err.println("Reader got inconsistent amount of floats and float count!");
-		   n = v.length / 2; // failsafe against inconcistent return value
+	   if (n > (v.length / 2)) {
+	      System. err. println ("Reader got inconsistent amount of floats and float count!");
+	      n = v.length / 2; // failsafe against inconsistent return value
 	   }
 
-//	System.out.format("Reader after getSamples: n = %s, v.length = %s\n", n,v.length);
 	   for (int i = 0; i < n; i ++) {
-		   //System.out.format("Reader for( i=%s < n=%s ) v.length = %s\n", i,n,v.length);
 	      currentPhase -= (int)(freqOffset);
 //	Note that "phase" itself might be negative;
 	      currentPhase = (currentPhase + inputRate) % inputRate;

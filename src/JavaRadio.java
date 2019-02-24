@@ -75,7 +75,8 @@ public class JavaRadio implements modelSignals  {
 	                             parseInt (getOption (args, "waitEnsemble:","10"));
 	   int	Frequency	= my_bandHandler. Frequency (channel);
 
-	   theDevice = null;
+	   theDevice = null;		// default
+
 	   if ((ipaddress != "no ip") && (ip_port != 0))
 	      theDevice = new RtlTcpDevice (ipaddress, ip_port,
 	                                    Frequency, gain, true);

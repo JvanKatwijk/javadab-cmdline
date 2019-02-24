@@ -28,7 +28,6 @@ JNIEXPORT jint JNICALL Java_devices_rtlsdrDevice_rtlsdr_1getSamples
 jfloat *body = env -> GetFloatArrayElements (samples, 0);
 rtlsdrHandler * h = reinterpret_cast <rtlsdrHandler *>(handle);
 int realAmount = h -> getSamples ((float *)body, amount);
-int	i;
         env -> ReleaseFloatArrayElements (samples, body, 0);
         return realAmount;
 }
